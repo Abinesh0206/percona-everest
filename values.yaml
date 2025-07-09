@@ -231,8 +231,8 @@ monitoring:
   namespaceOverride: everest-monitoring
   fullnameOverride: vm-operator
   crds:
-    enabled: false
-    plain: false
+    enabled: true
+    plain: true
   admissionWebhooks:
     enabled: false
   certManager:
