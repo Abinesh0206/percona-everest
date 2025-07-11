@@ -155,7 +155,7 @@ upgrade:
   preflightChecks: false
 olm:
   # -- If set, installs OLM in the provided namespace.
-  install: true
+  install: false
   # -- Namespace where OLM is installed. Do no change unless you know what you are doing.
   namespace: everest-olm
   # -- Image to use for Everest CatalogSource.
@@ -231,8 +231,8 @@ monitoring:
   namespaceOverride: everest-monitoring
   fullnameOverride: vm-operator
   crds:
-    enabled: true
-    plain: true
+    enabled: false
+    plain: false
   admissionWebhooks:
     enabled: false
   certManager:
