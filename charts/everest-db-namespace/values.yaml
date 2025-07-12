@@ -15,6 +15,6 @@ postgresql: true
 # @ignore
 olm:
   # -- Namespace where OLM is installed in the cluster.
-  namespace: everest-olm
+  namespace: olm
 # -- If set, cleans up the DB resources on uninstall.
 cleanupOnUninstall: true
