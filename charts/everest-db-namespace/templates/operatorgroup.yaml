@@ -5,6 +5,5 @@ metadata:
   namespace: {{ include "db.namespace" . }}
 spec:
   targetNamespaces:
-  - {{ include "db.namespace" . }} 
+    - {{ include "db.namespace" . }}
   upgradeStrategy: Default
-
