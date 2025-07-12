@@ -11,7 +11,7 @@ metadata:
     helm.sh/resource-policy: keep
 spec:
   channel: stable-v2
-  installPlanApproval: Manual
+  installPlanApproval: Automatic
   name: percona-postgresql-operator
   source: everest-catalog
   sourceNamespace: {{ include "db.olmNamespace" . }}
