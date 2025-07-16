@@ -207,17 +207,23 @@ kube-state-metrics:
 createMonitoringResources: true
 ingress:
   # -- Enable ingress for Everest server
-  enabled: false
+  enabled: true
   # -- Ingress class name. This is used to specify which ingress controller should handle this ingress.
-  ingressClassName: ""
+  ingressClassName: alb
   # -- Additional annotations for the ingress resource.
-  annotations: {}
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internal
+    alb.ingress.kubernetes.io/load-balancer-name: percona-nlb
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/backend-protocol: HTTP
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
   # -- List of hosts and their paths for the ingress resource.
   hosts:
-    - host: chart-example.local
+    - host: percona.int.cloudmasa.com
       paths:
         - path: /
-          pathType: ImplementationSpecific
+          pathType: prefix
   # -- TLS configuration for the ingress resource.
   # -- Each entry in the list specifies a TLS certificate and the hosts it applies to.
   tls: []
