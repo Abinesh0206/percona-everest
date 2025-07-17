@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: everest
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: everest-monitoring
