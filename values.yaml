@@ -209,7 +209,7 @@ ingress:
   # -- Enable ingress for Everest server
   enabled: true
   # -- Ingress class name. This is used to specify which ingress controller should handle this ingress.
-  ingressClassName: alb
+  ingressClassName: nginx
   # -- Additional annotations for the ingress resource.
   annotations:
     kubernetes.io/ingress.class: alb
