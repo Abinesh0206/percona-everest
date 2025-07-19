@@ -221,7 +221,7 @@ ingress:
     - host: percona.int.cloudmasa.com
       paths:
         - path: /
-          pathType: prefix
+          pathType: Prefix
   # -- TLS configuration for the ingress resource.
   # -- Each entry in the list specifies a TLS certificate and the hosts it applies to.
   tls: []
